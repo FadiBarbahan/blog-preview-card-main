@@ -1,0 +1,125 @@
+@font-face {
+  font-family: Figtree;
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Figtree;
+  src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+
+  --ff-base: Figtree;
+
+  --fw-regular: 500;
+  --fw-bold: 800;
+
+  --fs-p: .75rem;
+  --fs-h: 1.2rem;
+
+  --m-m: 1rem;
+  --m-s: .75rem;
+  --m-xs: .5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: var(--clr-yellow);
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  background-color: var(--clr-white);
+  max-width: 300px;
+  border-radius: 1rem;
+  border: 1px solid;
+  padding: var(--m-m);
+  position: relative;
+  display: grid;
+  gap: var(--m-s);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-color: var(--clr-gray-950);
+  border-radius: inherit;
+  translate: .5rem .5rem;
+}
+
+.card-img {
+  border-radius: .5rem;
+}
+
+.button-date {
+  display: grid;
+  gap: var(--m-xs);
+}
+
+.button {
+  max-width: min-content;
+  background-color: var(--clr-yellow);
+  padding: .5rem;
+  border-radius: .25rem;
+  font-size: var(--fs-p);
+  font-weight: var(--fw-bold);
+}
+
+.date {
+  color: var(--clr-gray-500);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-regular);
+}
+
+.title {
+  color: var(--clr-gray-950);
+  font-size: var(--fs-h);
+  font-weight: var(--fw-bold);
+}
+
+.light-text {
+  color: var(--clr-gray-500);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-regular);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: var(--m-xs);
+}
+
+.avatar-img {
+  max-width: 1.75rem;
+}
+
+.avatar-title {
+  color: var(--clr-gray-950);
+  font-size: var(--fs-p);
+  font-weight: var(--fw-bold);
+}
